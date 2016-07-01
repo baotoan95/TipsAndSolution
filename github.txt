@@ -1,0 +1,69 @@
+Các bước sử dụng git cơ bản
+- Cài đặt git cho OS
+- Cài đặt name và email:
+	+ git config --global user.name "name"
+	+ git config --global user.email "email"
+- Kiểm tra config đó:
+	+ cat ~/.gitconfig
+- Tạo repository ở local (work tree):
+	+ Tạo một folder làm repository
+	+ Mở git bash và di chuyển tới folder repository (dùng lệnh cd)
+	+ # git init để tạo repository
+- Tạo file source code và commit
+	+ Tạo file ở local repository
+	+ để push nội dung vào file vừa tạo có thể sử dụng lệnh: echo "content" > [file name]
+- Đổi status của file thành tracked để có thể commit và sẽ được lưu vào Stagin area
+	+ git add [file name]
+	Lúc này file sẽ được đổi thành tracked và sẵn sàng commit (sử dụng git status để xem status của file)
+- Commit file:
+	+ git commit -m "comment"
+	Lúc này git sẽ "chụp thay đổi" snapshot và lưu vào .git
+
+================================
+Để có thể commit thì file phải đang ở trong staged area và ở trạng thái modifier, để đưa file về trạng thái modifier và đưa nó vào trong staged area thì mình phải sử dụng git add.
+Cũng có thể Bỏ qua stagin area để commit: git commit -a -m "Skipped Staging Are to commit" (thêm tham số -a)
+================================
+Tạo tập tin rỗng trong git: touch [file name]
+================================
+Đưa tập tin tracked to untracked sử dụng: rm [file name], khi đó file sẽ được ẩn trong local và chuyển về trạng thái untracked. để xóa lun thì mình phải add lại và commit sau đó push để xác thực là đã xóa.
+
+	
+Tạo repository trên server (đk tài khoản github)
+- Tạo một repository trên github
+- Get link repository đó
+- Tại git bash nhập lệnh: git remove add origin [link repository]
+	Lúc này git sẽ đăng ký link repository tới local repository
+- Nhập username và password của github
+- git push -origin master: điều này sẽ push file đã commit lên repository server vào brach master
+================================
+Undo commit:
+git commit -amend -m "message"
+================================
+Xem danh sách log: git log
+Xem log cụ thể: git show [checksum code]
+Xem log đẹp sử dụng git lg:
+b1: git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+b2: git lg
+================================
+Loại bỏ file ra khỏi Staged area:
+git reset HEAD file_name
+================================
+Đưa tag qua brach khác:
+git checkout -b [brach_name] [tag_name]
+CHuyển về master:
+git checkout master
+================================
+Xem danh sách tag: git tag
+Đặt tag cho commit cho lần commit cuối: git tag [tag name]
+Đặt tag cho lần commit cũ:
+	Dùng git tag --pretty=oneline: để xem danh sách checksum của những lần commit
+	Dùng git tag [some checksum code first] [tag name] : để gán tag name
+Phải push lên server các tag này nó được gọi là release version
+================================
+Đổi tên remote:
+git remove rename origin [new_remote_name]
+================================
+Tạo branch: 
+git brach brach_name
+Xóa branch:
+git branch -d develop

@@ -1,0 +1,151 @@
+﻿Các định nghĩa cần ghi nhớ:
+
+Mô hình 3 lớp:
+- Presentation layer: định nghĩa các view (hay còn được gọi là lớp giao diện), lớp này gồm 2 thành phần chính là User interface component chịu trách nhiệm thu thập dữ liệu (textfield, button, ...) và User interface processer component dùng để điều khiển, quản lý các chuyển đổi giữa các user interface component.
+- Business layer: có trách nhiệm xử lý dữ liêu trước khi đưa lên Presentation layer, sử dụng các dịch vụ ở tầng Data Access cung cấp. Xử lý kết quả tính toán, kiểm tra ràng buộc, lựa chọn kết quả,... trả về cho Presentation layer, gồm 3 thành phần chính là:
+	+ Business component: những thành phần thực hiện các nhiệm vụ mà Service Interface cung cấp, chịu trách nhiệm kiểm tra ràng buộc, các nghiệp vụ.
+	+ Business Entities: Mô tả đối tượng thông tin mà hệ thống xử lý, đc dùng để trao đổi thông tin giữa Presentation và Data Access.
+	+ Service interface: cung cấp cho lớp Presentation thực hiện. Presentation chỉ cần biết các dịch vụ mà lớp này cung cấp và không quan tâm đến bên trong thực hiện như thế nào.
+- Data Access layer: Dữ trách nhiệm truy vấn tới CSDL (thêm, cập nhật, xóa, ...) sử dụng các hệ quản trị csdl như mySQL, SQL,...
+===========================================================
+
+Định nghĩa các annotation trong spring mvc:
+@Service: Đánh dấu các lớp business logic (service class), kết hợp với @Autowired để inject
+VD: public class CompanyServiceImpl implements CompanyService
+@Repository: Đánh dấu các lớp ở tâng DAO, các lớp data access logic (tác động trực tiếp vào db).
+VD: public class CompanyDAOImpl implements CompanyDAO
+@Components: Đánh dấu các thành phần khác như REST resource class, nó là 1 generic annotation, có thể thay thế @Service và @Repository trong một số trường hợp.
+VD: public class ContactResource
+@Autowired: Spring tự động inject (gán) các bean vào, các bean có thể được wired bởi name hoặc type, có thể dùng @Quatifier để tiếp tục tinh chỉnh hoặc sử dụng @Resource để wiring by name.
+VD:	@Service
+	public class CompanyServiceImpl implements CompanyService {
+	  @Autowired
+	  private CompanyDAO companyDAO;
+	}
+@Transactional: Dùng cho các phương thức ở lớp business
+VD: @Service
+	public class CompanyServiceImpl implements CompanyService {
+	 
+	  @Autowired
+	  private CompanyDAO companyDAO;
+	 
+	  @Transactional
+	  public Company findByName(String name) {
+		Company company = companyDAO.findByName(name);
+		return company;
+	  }
+	}
+@Scope: khai báo phạm vi sử dụng của một component
+VD: @Component
+	@Scope("request")
+	public class ContactResource {
+		...
+	}
+@Controller: Đánh dấu các controller class
+VD: @Controller
+	public class RedirectController {}
+@RequestMapping: định nghĩa path pattern cho một thực thể controller và phương thức handler (POST/GET/...)
+VD: @Controller
+	@RequestMapping("/company")
+	public class CompanyController {
+		@Autowired
+		private CompanyService companyService;
+	}
+@PathVariable: Định nghĩa một url argument
+VD: @Controller
+	@RequestMapping("/company")
+	public class CompanyController {
+	 
+	  @Autowired
+	  private CompanyService companyService;
+	 
+	  @RequestMapping("{companyName}")
+	  public String getCompany(Map<String, Object> map, @PathVariable String companyName) {
+		Company company = companyService.findByName(companyName);
+		map.put("company", company);
+		return "company";
+	  }
+	}
+@RequestParam: Định nghĩa url parameter sau ?
+VD:@Controller
+	@RequestMapping("/company")
+	public class CompanyController {
+	 
+	  @Autowired
+	  private CompanyService companyService;
+	 
+	  @RequestMapping("/companyList")
+	  public String listCompanies(Map<String, Object> map, 
+				@RequestParam int pageNum) {
+		map.put("pageNum", pageNum);
+		map.put("companyList", companyService.listCompanies(pageNum));
+		return "companyList";
+	  }
+	}
+@ModelAttribute: gửi một model theo request như là một argument
+VD: @Controller
+	@RequestMapping("/company")
+	public class CompanyController {
+	 
+	  @Autowired
+	  private CompanyService companyService;
+	 
+	  @RequestMapping("/add")
+	  public String saveNewCompany(@ModelAttribute Company company) {
+		companyService.add(company);
+		return "redirect:" + company.getName();
+	  }
+	}
+@SessionAttributes: Khai báo để sử dụng các object lưu trong session, đi kèm là @ModelAttribute được khai báo như bình thường để xử dụng nội bộ trong phương thức process, nó sẽ clearn khi gọi phương thức setComplete() trên đối tượng SessionStatus
+VD: @Controller
+	@RequestMapping("/owners/{ownerId}/pets/{petId}/edit")
+	@SessionAttributes("pet")
+	public class EditPetForm {
+	 
+		@ModelAttribute("types")
+		public Collection<PetType> populatePetTypes() {
+			return this.clinic.getPetTypes();
+		}
+		 
+		@RequestMapping(method = RequestMethod.POST)
+		public String processSubmit(@ModelAttribute("pet") Pet pet, 
+				BindingResult result, SessionStatus status) {
+			new PetValidator().validate(pet, result);
+			if (result.hasErrors()) {
+				return "petForm";
+			}else {
+				this.clinic.storePet(pet);
+				status.setComplete();
+				return "redirect:owner.do?ownerId="
+					+ pet.getOwner().getId();
+			}
+		}
+	}
+	
+====================================================================
+Cách tổ chức class:
+package entity: chứa các entity class ánh xạ object và db.
+package dao: chứa class chung để thực hiện giao tiếp với db.
+package service: chứa các class business logic.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

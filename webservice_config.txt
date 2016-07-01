@@ -1,0 +1,18 @@
+webservice config with maven:
+http://tutorial-academy.com/restful-webservice-jersey-maven/
+=========================================================================================
+web.xml config (for 2. edition)
+<servlet>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<!-- Register resources and providers under com.vogella.jersey.first package. -->
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>com.baotoan.spring</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>

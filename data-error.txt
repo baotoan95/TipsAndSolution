@@ -1,0 +1,10 @@
+﻿Error: unknow server mysql localhost:
+C:\Windows\System32\drivers\etc\hosts
+Make sure that you have the following entry:
+127.0.0.1 localhost 
+============================================
+
+Chọn 1 kí tự utf-8 ví dụ a mà xuất ra à, á, ạ => đổi kiểu dữ liệu thành varbinary rồi select convert(col_name using utf8)
+
+6c7dfb2d14d1443b288e7548ebede6970e159b99
+6c7dfb2d14d1443b288e7548ebede6970e159b99

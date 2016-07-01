@@ -1,0 +1,200 @@
+﻿//============================== xxx-servlet.xml ===============================
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.1.xsd  
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-4.1.xsd  
+	  http://www.springframework.org/schema/websocket 
+      http://www.springframework.org/schema/context/spring-websocket.xsd  
+      http://www.springframework.org/schema/mvc
+      http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+
+	<context:component-scan base-package="com.baotoan.spring.controller, com.baotoan.spring.service" />
+	<mvc:annotation-driven />
+
+<!-- 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+<!-- 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" /> -->
+<!-- 		<property name="prefix" value="/WEB-INF/pages/" /> -->
+<!-- 		<property name="suffix" value=".jsp" /> -->
+<!-- 	</bean> -->
+	
+		<bean id="tilesConfigurer"
+			class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+			<property name="definitions">
+				<list>
+					<value>/WEB-INF/tiles.xml</value>
+				</list>
+			</property>
+		</bean>
+
+		<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+			<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		</bean>
+
+		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+			<property name="prefix" value="/WEB-INF/pages/" />
+			<property name="suffix" value=".jsp" />
+		</bean>
+	
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	
+	<!-- Database manager -->
+	<bean id="baseDAO" class="com.baotoan.spring.dao.BaseDAO">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/inspirestore" />
+		<property name="username" value="root" />
+		<property name="password" value="toan1142" />
+		<property name="removeAbandoned" value="true" />
+		<property name="initialSize" value="20" />
+		<property name="maxActive" value="30" />
+	</bean>
+	
+	<!-- Production implementation of the JavaMailSender interface, supporting 
+		both JavaMail MimeMessages and Spring SimpleMailMessages -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com"/>
+		<property name="port" value="587"/>
+		<property name="username" value="baotoan.95@gmail.com"/>
+		<property name="password" value="toan12345"/>
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.mime.charset">UTF-8</prop>
+			</props>
+		</property>
+	</bean>	
+
+</beans>
+
+//============================= spring-security.xml =============================
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+      
+    <http auto-config="true" >
+        <intercept-url pattern="/" access="permitAll" />
+        <intercept-url pattern="/home" access="permitAll" />
+        <intercept-url pattern="/admin**" access="hasRole('ADMIN')" />
+        <intercept-url pattern="/dba**" access="hasRole('ADMIN') and hasRole('DBA')" />
+        <form-login  authentication-failure-url="/Access_Denied" />
+    </http>
+  
+    <authentication-manager >
+        <authentication-provider>
+            <user-service>
+                <user name="bill"  password="abc123"  authorities="ROLE_USER" />
+                <user name="admin" password="root123" authorities="ROLE_ADMIN" />
+                <user name="dba"   password="root123" authorities="ROLE_ADMIN,ROLE_DBA" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+      
+     
+</beans:beans>
+
+
+//============================= web.xml =========================================
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<!-- so that you don’t have to add <%@ page pageEncoding="utf-8" %> to every jsp file -->
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
+	<display-name>Digital</display-name>
+
+	<filter>
+		<!-- This filter has to come before other filters. -->
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- Loads Spring Security config file -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring-security.xml
+		</param-value>
+	</context-param>
+	
+	<!-- security filter -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<!-- default error page -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404error.jsp</location>
+	</error-page>
+
+</web-app>
+
+
+//=============================== tiles.xml ======================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="common" template="/WEB-INF/pages/templates/template.jsp">
+		<put-attribute name="header" value="/WEB-INF/pages/templates/header.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/pages/templates/footer.jsp" />
+	</definition>
+
+	<definition name="subpage" extends="common">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body" value="/WEB-INF/pages/page-name.jsp" />
+	</definition>
+	
+</tiles-definitions>

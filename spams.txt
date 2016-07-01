@@ -1,0 +1,57 @@
+This is C.
+
+C doesn't care about class, because C is egalitarian. 
+
+C doesn't care who your parents are or what you inherited from them. 
+
+C doesn't define your methods for you. C let's you define them for yourself. 
+
+C lets you structure you for your own sake. 
+
+C is good. Be like C.
+
+Nếu bạn chọn cô gái số 2 Bạn là một người rất tinh ý, có năng lực nhìn thấu tình cảm, trong mọi trường hợp, luôn hiền hòa, điềm đạm thể hiện khả năng của mình. Bạn hiểu rõ ý người khác, biết lắng nghe. Bạn bè có điều gì khó khăn sẽ tìm bạn kể khổ, than vãn, mong nhận được lời khuyên từ "chuyên gia tâm lí" như bạn.
+Trên phương diện tình cảm bạn có chút ngốc nghếch, thường ở trước mặt người mình thích tỏ vẻ mạnh mẽ. Những người thích thể hiện mình như bạn, cần một người càng mạnh mẽ hơn, để bạn có thể tin cậy dựa vào, tốt nhất là người có chút thô lỗ, nhưng cởi mở, chín chắn, hiểu chuyện.
+
+http://lmgtfy.com/
+
+Google API key (Browser key): AIzaSyD45wmqNnY8gs5vlquI5BiWN4ym99MAaAk
+Youtube API key (Browser key): AIzaSyB3h3jDO9z6Oea8TeZbnsp7qHnsxeToZw4
+
+=======================================
+Google analytics:
+ID: UA-77904743-1
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77904743-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+========================================
+
+
+Hello Vietnamese learners! I come from Ho Chi Minh City and I can help you learn Vietnamese. You can teach me your native language for exchange. Please feel free to contact me! :D
+
+** Yêu cầu 
+- Đã tốt nghiệp Cao đẳng, Đại học hoặc tương đương liên quan đến CNTT. 
+- Có kinh nghiệm lập trình java, có kiến thức tốt về java core, server java, http server, J2EE (Servlets, Web Services, xử lý đa luồng...) 
+- Có kiến thức tốt về lập trình web: cookies, html5, JS, CSS, Ajax 
+- Hơn 1 năm kinh nghiệm lập trình Java. 
+- Có kinh nghiệm Spring framework (Spring Core, Spring AOP, Spring Security, Spring MVC, Spring Integration), JSP, Hibernate, SVN/Git , Maven, ANT, Log4j, Servlet, JDBC. 
+- Sử dụng thành thạo ít nhất 1 hệ quản trị cơ sở dữ liệu như MySQL, Oracle.
+
+** Kỹ năng 
+- Am hiểu kĩ năng và quy trình phát triển phần mềm. 
+- Có kinh nghiệm lập trình Network, client/server, multi-thread, multitasking 
+- Có kiến thức tốt về lập trình hướng đối tượng (OOP) và design pattern, học hỏi nhanh, chủ động, sáng tạo trong công việc. 
+- Kỹ năng đọc/hiểu tài liệu kỹ thuật bằng tiếng Anh. 
+- Kỹ năng lên kế hoạch công việc tốt, quản lý thời gian tốt.
+
+** Ưu tiên 
+- Có kinh nghiệm về NoSQL như mongodb, redis…
+
+

@@ -1,0 +1,183 @@
+﻿cglib : is required to process @Configuration classes (Error: Exception in thread "main" java.lang.IllegalStateException: 
+CGLIB is required to process @Configuration classes.)
+============================================
+spring-orm: Less coding is required: By the help of Spring framework, you don't need to write extra codes before and after the actual database logic such as getting the connection, starting transaction, commiting transaction, closing connection etc.
+Easy to test: Spring's IoC approach makes it easy to test the application.
+Better exception handling: Spring framework provides its own API for exception handling with ORM framework.
+Integrated transaction management: By the help of Spring framework, we can wrap our mapping code with an explicit template wrapper class or AOP style method interceptor.
+============================================
+No WebApplicationContext found: no ContextLoaderListener registered?: add contextloaderlistener trong file config (smartstore)
+============================================
+Đụng độ thư viện js: dùng chung 1 thư viện jquery mới nhất, xoá các thư viện khác đi. (trường hợp khác dùng noConflict() trong jquery)
+============================================
+UTF-8 cho json trong spring: produces = "text/plain;charset=UTF-8" vào requestmapping
+============================================
+UTF-8 nhớ cài đặt cho page là utf-8 hoặc cấu hình trong server.xml
+<Connector port="8080" protocol="HTTP/1.1"  connectionTimeout="20000"  redirectPort="8443" URIEncoding="UTF-8" />
+request.setCharacterEncoding("UTF-8"); 
+response.setCharacterEncoding("UTF-8"); 
+response.setContentType("text/html; charset=UTF-8"); 
+============================================
+Khi dùng tiles:java.lang.NoSuchMethodError: org.slf4j.spi.LocationAwareLogger.log(Lorg/slf4j/Marker;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Throwable;)V
+	org.apache.commons.logging.impl.SLF4JLocationAwareLog.debug(SLF4JLocationAwareLog.java:133):
+Thêm common-logging, slf4j-api và slf4j12
+<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>3.0.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-nop</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+=============================================
+Etat HTTP 500 - org.apache.jasper.JasperException: Unable to compile class for JSP
+Khi dùng validation, form:input có value="" sẽ quăng ra lỗi trên.
+=============================================
+HTTP Status 500 - Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: The current request is not a multipart request
+Cause: Upload file chỉ hỗ trợ phương thức POST và hãy chắc chắn rằng bạn đã cấu hình đầu đủ và chính xác. Bao gồm:
+các lib 
+<!-- Apache Commons Upload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<!-- Apache Commons Upload -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+và trong file xxx-servlet.xml:
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+         <!-- setting maximum upload size -->
+        <property name="maxUploadSize" value="10000000" />
+</bean>
+	
+==============================================
+Error: Neither BindingResult nor plain target object for bean name available as request attr
+Solution: Có thể đã viết @ModelAttribute Object object hãy thay là @ModelAttribute("name") Object object
+Cách tốt nhất là hãy viết đầy đủ các tham số của @ModelAttribute ở bất kì đâu
+- Kiểm tra url-pattern
+- Kiểm tra đúng với prefix suffix đã config chưa.
+==============================================
+HTTP Status 400 - Required User parameter 'user' is not present
+The request sent by the client was syntactically incorrect.
+Solution:
+	- config parameter chưa chính xác, ví dụ ở form là một object thì param trong controller phải là @modelattribute.
+	- cũng có thể là các kiểu dữ liệu trong modelattribute của bạn không được convert đúng qua kiểu dữ liệu ta định trong object, vị dụ kiểu Date, nó ko thể convert trực tiếp từ dạng String (dữ liệu trong textfield) qua Date mà phải qua một simpleformatdate chẳng hạn.
+Trong trường hợp thứ hai, khi String của request không convert về được kiểu Date thì ta dùng thêm phương thức sau vào trong controller xử lý modelattribute đó:
+@InitBinder
+	public void initBinder(WebDataBinder binder) {
+	    SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+	    format.setLenient(true);
+	    binder.registerCustomEditor(Date.class, new CustomDateEditor(format, true));
+	}
+Phương thức này sẽ nắm bắt tất cả các request và response có định dạng NHƯ kiểu Date và convert chúng về kiểu Date nếu phù hợp.
+Nó hoạt động theo mô hình adapter. nghĩa nó nó sẽ convert về đúng kiểu dữ liệu:
+ví dụ:
+Ta có
+	public class A {
+		private int a;
+		private int b;
+	}
+	
+	public class B {
+		private String a;
+		private String b;
+	}
+	
+Trường hợp ta muốn B lấy các dữ liệu của A nhập vào của mình. thì adapter sẽ làm như sau.
+public class C extends B {
+	public C(int a, int b) {
+		this.a = String.valueOf(a);
+		this.b = String.valueOf(b);
+	}
+}
+Chú ý: @initBinder chỉ được gọi khi sử dụng @Valid
+Tham khảo bài: https://raymondhlee.wordpress.com/2011/06/08/using-initbinder-in-spring-3-controller/ để biết hơn về @InitBinder annotation.
+==========================================================================
+Gửi mime mail không xác định được mã html:
+public boolean sender(String[] toAddress, String subject, String messageBody) {
+		MimeMessage message = mailSender.createMimeMessage();
+			try {
+				MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+				helper.setFrom("baotoan.95@gmail.com");
+				helper.setTo(toAddress);
+				helper.setSubject(subject);
+				helper.setText(messageBody, true); // Tham số true xác định có mã html
+				mailSender.send(message);
+				return true;
+			} catch (MessagingException e) {
+				return false;
+			}
+		}
+===========================================================================
+Submit form sử dụng spring security nếu ko process được tại action j_spring_security_check thì config loginProcessingUrl
+===========================================================================
+Sử dụng ajax bị lỗi 406 Not acceptable: Thêm thư viện jackson
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+============================================================================
+java.lang.OutOfMemoryError: PermGen space
+Nguyên nhân tomcat config bộ nhớ quá fix với app nên cần phải config lại:
+B1: vào tomcat-folder/bin/catalina.bat thêm vào:
+//...
+rem Get standard environment variables
+if not exist "%CATALINA_BASE%\bin\setenv.bat" goto checkSetenvHome
+call "%CATALINA_BASE%\bin\setenv.bat"
+goto setenvDone
+:checkSetenvHome
+if exist "%CATALINA_HOME%\bin\setenv.bat" call "%CATALINA_HOME%\bin\setenv.bat"
+:setenvDone
+//...
+B2: vào bin/ tạo thêm setenv.bat dán đoạn code sau vào:
+set JAVA_OPTS=-Dfile.encoding=UTF-8 -Xms128m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m
+=============================================================================
+java.lang.IllegalStateException: No WebApplicationContext found: no ContextLoaderListener registered?
+- Chưa khai báo chính xác dispatcher
+=============================================================================
+INFO: validateJarFile(C:\Users\mibvzd0\workspace\.metadata\.plugins\
+org.eclipse.wst.server.core\tmp2\wtpwebapps\hapi_hl7\WEB-INF\lib\
+servlet-api-2.4.jar) - jar not loaded.
+See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Solution: => The dependency should be in the provided scope, rather than the default compile scope in your pom file.
+=============================================================================
+According to TLD or attribute directive in tag file, attribute test does not accept any expressions
+Solution: đổi import thư viện ở đầu trang jsp
+=============================================================================
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.provisioning.JdbcUserDetailsManager#0': Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'dataSource' is defined
+Solution: config file database riêng và khai báo bên web.xml
+=============================================================================
+Method POST không hoạt động là do dùng form của html bình thường, muốn hoạt động phải dùng form:form của jstl
+=============================================================================
+Muốn sử dụng được các thẻ @valid (JSR-303), @datetimeformat(Joda Time), @numberformat, Using the Spring 3 Type ConversionService as a simpler and more robust alternative to JavaBeans PropertyEditors, Json (Jackson)... thì phải config <mvc:annotation-driven>
+=============================================================================
+Khi upload file báo lỗi:
+The character encoding of the plain text document was not declared. The document will render with garbled text in some browser configurations if the document contains characters from outside the US-ASCII range. The character encoding of the file needs to be declared in the transfer protocol or file needs to use a byte order mark as an encoding signature.
+Nguyên nhân: Khi sử dụng Spring security trong project thì chức năng upload file bị chặn bởi CSRF
+Solution: action="${requestScope.action }?${_csrf.parameterName}=${_csrf.token}"

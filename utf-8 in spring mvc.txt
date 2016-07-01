@@ -1,0 +1,33 @@
+b1: in web.xml input code to before:
+<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+b2: in jsp file:
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+and:
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> to head tag.
+
+b3: in database connection config, edit url becomes:
+jdbc:mysql://localhost:3306/inspirestore?useUnicode=true&amp;characterEncoding=UTF-8
+
+b4: if you want url encode to utf-8, for example:
+@RequestMapping(value="/update", method = RequestMethod.GET, produces="application/x-www-form-urlencoded;charset=UTF-8")
+
+b5: let's sure that database formated (for all tables):
+Character set: utf-8 --- UTF-8 Unicode
+Collation: utf-8_unicode_ci
+Engine: innoDB

@@ -1,0 +1,6 @@
+Các bước implement chức năng search youtube sử dụng youtube API:
+- Tạo tài khoản google.
+- Đăng nhập và truy cập console.developers.google.com
+- Tạo mới một project
+- enable youtube data api trong dashboard của project.
+- Tạo credentials chọn API key -> Browser key -> get key

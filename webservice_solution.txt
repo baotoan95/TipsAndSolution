@@ -1,0 +1,8 @@
+Tạo webservice với axis2:
+	- Axis2 sử dụng lib 1.6.2 phiên bản 1.7 lỗi
+=====================================================================
+java.lang.ClassNotFoundException: com.sun.jersey.spi.container.servlet.ServletContainer
+Solution:
+You have downloaded Jersey 2 (which RI of JAX-RS 2). The tutorial you're referring to uses Jersey 1. Download Jersey 1.17.1 from (here), should be sufficient for you.
+Jersey 1 uses com.sun.jersey, and Jersey 2 uses org.glassfish.jersey hence the exception.
+Also note that also init-param starting with com.sun.jersey won't be recognized by Jersey 2.

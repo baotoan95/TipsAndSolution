@@ -1,0 +1,82 @@
+Unknown entity: com.baotoan.spring.entity.User
+<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="packagesToScan" value="com.baotoan.spring.entity"/>
+		<property name="hibernateProperties" ref="hibernateProperties"/>
+</bean>
+================================================================================================
+HTTP Status 500 - Request processing failed; nested exception is org.hibernate.AssertionFailure: null id in com.baotoan.spring.entity.Contact entry (don't flush the Session after an exception occurs)
+Lỗi có thể do trường trong dữ liệu trùng với từ khóa của SQL, hoặc câu query có vấn đề.
+================================================================================================
+Khắc phục lỗi không load được quan hệ (mặc định joincolumn sẽ có FatchType là LAZY nên nó ko load như ta mong muốn, để load được ta phải yêu cầu nó ***)
+Hibernate will now load the user profile into the user object by default. This means that if you access user.getUserProfile() it won’t be NULL (unless the joining table actually doesn’t contain a matching row by the “user_profile_id” join column).
+So, the long story short here is:
+
+FetchType.LAZY = Doesn’t load the relationships unless explicitly “asked for” via getter
+FetchType.EAGER = Loads ALL relationships
+
+***
+public User getUserWithProfileById(Long userId) {  
+    Session session = sessionFactory.getCurrentSession();  
+  
+    User user = (Users) session.createCriteria(User.class).add(Restrictions.idEq(userId)).uniqueResult();  
+    // this will force SQL to execute the query that will join with the user's profile and populate  
+    // the appropriate information into the user object.  
+    Hibernate.initialize(user.getUserProfile());  
+    return user; 
+}
+=================================================================================================
+org.hibernate.PropertyAccessException: could not get a field value by reflection getter of com.baotoan.spring.entity.Category.cateId
+cause by: Caused by: java.lang.IllegalArgumentException: Can not set java.lang.Integer field com.baotoan.spring.entity.Category.cateId to java.lang.Integer
+Lỗi xảy ra do Có một trường trong entity Product chứa Category và cateId ở trong Category, cách khắc phục là select như sau:
+From Product p where p.category.cateId=:categoryId
+Chú ý: Ví dụ Student có Class trong class có ID (mối quan hệ ManyToOne) khi truy tìm học sinh theo Class thì:
+From Student s where s.class.id = :id 
+=================================================================================================
+fetch lazy field in hibernate: setFetchMode to JOIN for field need to fetch
+=================================================================================================
+Etat HTTP 500 - Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: A different object with the same identifier value was already associated with the session : [com.news.cd.entities.Category#8]; nested exception is org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [com.news.cd.entities.Category#8]
+Solution: sử dụng merge();
+=================================================================================================
+Hibernate Error: org.hibernate.NonUniqueObjectException: a different object with the same identifier value was already associated with the session
+Lý do: có 2 thể hiển của cùng một object mà hibernate cố gắng để persist vào db, 2 thể hiện đó có cùng id nhưng khác nội dung, khi persist nó không biết nên persist nội dung nào vào db.
+getSession().clear();
+=================================================================================================
+merge() cập nhật record đã có và add những gì chưa có
+=================================================================================================
+Nên dùng cascading của hibernate khi sử dụng hibernate integrate với framework khác.
+org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing
+Solution: cascading merge
+=================================================================================================
+Delete child khi delete parent sử dụng mysql:
+ALTER TABLE posts ADD CONSTRAINT fk_post_rssc FOREIGN KEY (p_rsschannel) REFERENCES rss_channels(rssc_id) ON DELETE CASCADE
+Cách 2: override phương thức hashCode của entity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mình có thằng em sinh năm 99 đang học cấp 3 tại SG . Nói đẹp trai thì hơi quá nhưng được cái trắng trẻo dễ nhìn cao 1m72 nặng 62kg . Biết cách ăn nói vui tính nhiệt tình , bạn nử nào có nhu cầu muốn làm chị dâu nó thì cmt tại đây nhé :))))))

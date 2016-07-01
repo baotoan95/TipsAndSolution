@@ -1,0 +1,14 @@
+Tạo like page, comment facebook:
+b1: tạo app -> có được appID và secret
+b2: vào link docs/references/like or comment
+b3: điền url của web vào
+b4: generate code và chèn vào nơi nào cần chèn trên web của mình.
+
+Quản lý comment: https://developers.facebook.com/tools/comments
+
+13329015
+
+http://www.techferry.com/articles/spring-annotations.html 
+https://www.facebook.com/yannews/videos/1171593659578188/
+http://www.techferry.com/articles/spring-annotations.html#Service
+http://itseovn.com/threads/mo-hinh-3-lop-la-gi-va-cach-su-dung-mo-hinh-3-lop-hieu-qua.14156.html

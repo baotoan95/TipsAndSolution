@@ -1,0 +1,4 @@
+Deploy war file to openshift (openshift, dot.tk, fakecloud)
+Sau khi upload dk tài khoản openshift và tạo application, chúng ta sẽ được một url của app (như springnews-baotoan95.rhcloud.com)
+Vào trang check-host.net nhập url app vào rồi nhấn info để lấy thông tin của host, cụ thể là lấy ip address
+Sau khi đk và tạo domain ở dot.tk, phần user DNS -> user freedom DNS service -> ip address điều vào ip vừa lấy được

@@ -1,0 +1,33 @@
+Để upload dynamic description lên 3.:
+upload project facets: java 8 (runtime with jdk8) + config plugin in maven:
+b1 - cấu hình context path với jdk 8
+b2 - bỏ chọn dynamic -> update java 1.8 trong prj facets -> apply
+b3 - chọn lại dynamic update lên 3.
+b4 - add server runtime: còn lỗi
+Project configuration is not up-to-date with pom.xml. Run Maven->Update Project or use Quick Fix.
+b5 - config plugin in maven:
+<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+b6 - right click prj -> maven -> upload project
+=======================================================================================================
+Sử dụng lib không có trên repository, sử dụng cmd
+mvn install:install-file -Dfile=C:\Users\BaoToan\.m2\repository\sqljdbc4\sqljdbc4.jar -Dpackaging=jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0
+=======================================================================================================
+Với prj 3. phải để nội dung ở mục WebContent lớn dưới cùng.
