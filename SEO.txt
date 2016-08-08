@@ -1,0 +1,38 @@
+- Tạo sitemap: http://www.xml-sitemaps.com
+Download sitemap.xm sitemap.html ror.xml urllist.xml sitemap.xml.gz upload lên host vào thư mục gốc
+- Tạo file robots.txt và upload vào thư mục gốc:
+Nội dung:
+User-agent: * cho phép tất cả các máy tìm kiếm tìm
+Sitemap: http://btit95.esy.es/sitemap.xml.gz link tới file sitemap
+
+- Đăng ký site với google webmaster tool: 
+	+ Gửi file sitemap.xml.gz
+- Đăng ký với máy tìm kiếm google: https://www.google.com/webmasters/tools/submit-url
+
+SEO
+- Công cụ:
+	+ Web developer
+	+ SEO Quake
+	
+- Các thông số SEO
+	+ PR: Tầm quan trọng của website (Trang web khác trỏ tới trang mình và ngược lại)
+	+ I (Google index): Tổng số trang con được Google lưu ở DB
+	+ Alexa rank: thứ hạng của website đứng thứ hạng bao nhiêu đối với country and global
+	+ Age: tuổi của domain
+	+ Density: mật độ từ khóa
+	+ Internal link: liên kết nội bộ
+	+ External link: Trang khác trở tới trang hiện tại
+- SEO quake diagnosis: check website chuẩn SEO
+- Web developer:
+	+ Kiểm tra heading
+	+ Tối ưu hình ảnh (thẻ alt) alt phải chứa từ khóa
+	
+- Chú ý khi dev web:
+	+ Hình ảnh phải có alt
+	+ Từ khóa phải để trong heading tags
+	
+- Google tools:
+	+ Google webmaster tool: https://www.google.com/webmasters/tools/home?hl=vi
+	+ Google submit url: https://www.google.com/webmasters/tools/submit-url
+	+ Google ping: http://googleping.com/
+	+ Google analytics: https://analytics.google.com/analytics/web/?hl=vi&pli=1#home/a77904743w116866555p122227058/
