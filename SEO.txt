@@ -36,3 +36,10 @@ SEO
 	+ Google submit url: https://www.google.com/webmasters/tools/submit-url
 	+ Google ping: http://googleping.com/
 	+ Google analytics: https://analytics.google.com/analytics/web/?hl=vi&pli=1#home/a77904743w116866555p122227058/
+	
+- Tối ưu website:
+	+ https://kangax.github.io/html-minifier/ Tối ưu html
+	+ http://vi.coderh.com/compressor/javascript-minify/ Tối ưu html,css,js
+	
+	
+	MH managazine lite
