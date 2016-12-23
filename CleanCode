@@ -1,0 +1,5 @@
+1. Meaningful Names
+- It is easy to say that names should reveal intent.
+- It should tell you why it exists, what it does, and how it is used.
+- Spacing and indentation are reasonable.
+- It can include an intention-revealing function (call it isFlagged) to hide the magic numbers.

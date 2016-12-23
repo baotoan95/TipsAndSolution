@@ -67,3 +67,34 @@ Tạo branch:
 git brach brach_name
 Xóa branch:
 git branch -d develop
+
+Giới thiệu tổng quan về hệ thống quản lý Version (VCS)
+Giới thiệu tổng quan về GIT
+Cách cài đặt GIT trên máy tính của bạn
+Cấu hình GIT cho lần đầu tiên sử dụng
+Khởi tạo 1 Repository
+Quản lý sự thay đổi trong Repository
+Xem lịch sử Commit
+Huỷ bỏ sự thay đổi trong thư mục làm việc
+Làm việc với Remote Repository
+Làm việc với Tag trong GIT
+Tạo các Alias để tăng tốc độ gõ lệnh
+Khái niệm và cách làm việc với Branch
+Cách merge nhánh và xử lý xung đột (Conlicts) trong GIT
+Quản lý nhánh trong GIT
+Workflow làm việc với nhánh trong GIT
+Làm việc với Branches trên Remote Repository
+Tìm hiểu Rebasing trong GIT
+Github - Cài đặt và cấu hình Github
+Github - Đóng góp vào một dự án trên Github
+Github - Bảo trì dự án trong Github
+Github - Quản lý team dự án
+Cài đặt một Git Server cho chính mình
+Làm rõ hơn vấn đề Reset
+Stashing và Cleaning
+Merge code nâng cao
+Làm việc với GIT thông qua Source Tree
+Sử dụng GIT với Git Extension trong Visual Studio
+Giới thiệu về Bitbucket
+Bài tập quản lý source code trong dự án thực tế.
+Ôn tập kiến thức và kết thúc khoá học

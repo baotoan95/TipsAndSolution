@@ -480,3 +480,263 @@ Jessica's first day of school
 {"time":"117.50","en":"Maybe you could fix computers or work in a library","vi":"Có thể bạn có thể sửa chữa máy tính hoặc làm trong một thư viện"},
 {"time":"122.10","en":"You could wash windows or be the captain of a ship","vi":"Bạn có thể chùi cửa sổ hay làm một thuyền trưởng của một con tàu"},
 {"time":"127.07","en":"There is no limit to what you can be","vi":"Không có giới hạn cho những gì mà bạn có thể làm"}]
+
+
+[{"time":"0.70","en":"Clothing","vi":"Trang phục"},
+{"time":"3.69","en":"I change my clothes a lot","vi":"Tôi thay đổi quần áo của tôi rất nhiều"},
+{"time":"6.92","en":"If I am going somewhere fancy, I wear a dress","vi":"Nếu tôi tới một nơi yêu thích, tôi mặc một chiếc váy"},
+{"time":"12.05","en":"I wear stockings on my legs, and I wear a pair of nice shoes","vi":"Tôi đi tất chân và mang một đôi dày thật đẹp"},
+{"time":"17.38","en":"If I am going to play sports, I wear a sweatshirt and jeans","vi":"Nếu tôi đi chơi thể thao, tôi mặc một chiếc áo nỉ và quần bò"},
+{"time":"23.1","en":"If I am going to the beach, I wear a bathing suit or a bikini","vi":"Nếu tôi tới bãi biển, tôi mặc một bộ đồ bơi hoặc một bộ bikini"},
+{"time":"28.56","en":"My brother wears swimming trunks to the beach","vi":"Anh trai tôi thường mặc quần bơi đến bãi biển"},
+{"time":"32.48","en":"At work, I wear a skirt and a blouse","vi":"Tại nơi làm việc, tôi mặc một chiếc váy và áo cánh"},
+{"time":"36.63","en":"Underneath my clothes, I wear underwear","vi":"Bên trong trang phục của tôi, tôi mặc đồ lót"},
+{"time":"40.69","en":"A lady wears a bra and panties as underwear","vi":"Một người phụ nữ mặc một chiếc áo ngực và quần lót như đồ lót"},
+{"time":"44.98","en":"A man wears boxer or jockey shorts as underwear","vi":"Một người đàn ông mặc quần lót ống rộng hoặc một chiếc quần xịp như đồ lót"},
+{"time":"49.36","en":"Today, I am wearing a blouse and a pair of jeans over my underwear","vi":"Hôm nay, tôi mặc một chiếc áo cánh và một chiếc quần bò bên ngoài đồ lót của tôi"},
+{"time":"54.63","en":"I have socks and shoes on my feet","vi":"Tôi đi tất và giày vào chân"},
+{"time":"58.25","en":"In the summer, I often wear sandals on my feet","vi":"Mùa hè, tôi thường mang dép vào chân"},
+{"time":"62.73","en":"In the summer, the tops that I wear are usually sleeveless","vi":"Vào mùa hè, tôi hầu như mặc áo cộc tay"},
+{"time":"68.22","en":"I usually wear shorts in the summer","vi":"Tôi thường mặc quần short vào mùa hè"},
+{"time":"71.63","en":"Sometimes, I wear a sweater or a jacket if the weather is cool","vi":"Thỉnh thoảng, tôi mặc một chiếc áo len hoặc một chiếc áo khoác nếu thời tiết lạnh"},
+{"time":"76.94","en":"I wear a cap or a hat on my head","vi":"Tôi đội một chiếc mũ lưỡi trai và một hoặc một chiếc nón lên đầu"},
+{"time":"81","en":"I wear a belt to hold up my jeans or my slacks","vi":"Tôi đeo thắt lưng để giữ quần bò hay bộ quần áo của tôi"},
+{"time":"85.70","en":"Women sometimes wear a dress or a skirt","vi":"Phụ nữ thỉnh thoảng mặc một chiếc đầm hoặc một chiếc váy"},
+{"time":"90.18","en":"Men wear a pair of slacks and a shirt","vi":"Đàn ông mặc một bộ quần áo và áo sơ mi"},
+{"time":"94.1","en":"Some men wear a suit and a shirt and tie","vi":"Một số người đàn ông mặc một bộ com-lê, áo sơ mi và đeo cà-vạt"},
+{"time":"98.40","en":"If it is very cold outside, I wear a winter coat","vi":"Nếu bên ngoài trời rất lạnh, tôi mặc một chiếc áo khoác mùa đông"},
+{"time":"103.4","en":"If it is cold, I like to wear gloves or mittens on my hands","vi":"Nếu trời lạnh, tôi thích đeo đôi găng tay hoặc găng tay hở ngón trên tay tôi"},
+{"time":"109.01","en":"Sometimes, I wrap a scarf around my neck to keep warm","vi":"Đôi khi, tôi quằng một chiếc khăn quanh cổ để giữ ấm"},
+{"time":"113.63","en":"I wear a toque on my head in cold weather","vi":"Tôi đội một chiếc mũ vải không vành trên đầu khi thời tiết lạnh"},
+{"time":"117.50","en":"I wear boots on my feet in the winter","vi":"Tôi mang giày cao cổ trên chân vào mùa đông"},
+{"time":"121.5","en":"If it is raining, I wear a raincoat","vi":"Nếu trời mưa, tôi mặc một chiếc áo mưa"},
+{"time":"125.31","en":"The way that I dress depends a lot on the weather","vi":"Cách mà tôi ăn mặc phụ thuộc rất nhiều vào thời tiết"}]
+
+[{"time":"53.50","en":"Before I lay me down to rest","vi":"Trước khi con ngả giấc nghỉ ngơi"},
+{"time":"60.11","en":"I ask the Lord one small request","vi":"Con xin Chúa một thỉnh cầu nhỏ"},
+{"time":"66.81","en":"I know I have all I could need","vi":"Con biết con đã có mọi thứ mình cần"},
+{"time":"72.09","en":"But this prayer is not for me","vi":"Nhưng lời nguyện cầu này không dành cho con"},
+{"time":"78.90","en":"Too many people on this day","vi":"Có quá nhiều người ngày nay"},
+{"time":"85.30","en":"Don't have a peaceful place to stay","vi":"Không có một chốn thanh bình để ở"},
+{"time":"91.21","en":"Let all fighting cease that your children may see peace","vi":"Xin chiến tranh hãy lắng xuống để trẻ em được thấy hòa bình"},
+{"time":"97.08","en":"Wipe their tears of sorrow away","vi":"Gạt đi nước mắt của nỗi buồn"},
+{"time":"106.06","en":"To believe in a day","vi":"Để tin tưởng vào một ngày"},
+{"time":"112.90","en":"When hunger and war will pass away","vi":"Khi nghèo đói và chiến tranh sẽ qua đi"},
+{"time":"118.25","en":"To have the hope amidst despair","vi":"Để có niềm hy vọng giữa những tuyệt vọng"},
+{"time":"125.17","en":"That every sparrow's counted","vi":"Để mỗi tiếng chim sẻ sẽ được nghe thấy"},
+{"time":"128.4","en":"That you hear each cry and listen to each prayer","vi":"Để tiếng khóc và mỗi lời nguyện cầu được Người nghe thấy"},
+{"time":"138.85","en":"Let me try always to believe","vi":"Hãy để con luôn tin tưởng"},
+{"time":"145.27","en":"That we can hear the hearts that grieve","vi":"Rằng chúng ta có thể chữa lành những trái tim đang đau khổ"},
+{"time":"150.81","en":"Please help us not ignore the anguished cries of the poor","vi":"Xin giúp chúng con không vô tình trước tiếng khóc khổ đau của người nghèo"},
+{"time":"156.83","en":"Or their pain will never leave","vi":"Cũng như nỗi đau không dứt của họ"},
+{"time":"163","en":"To believe in a day","vi":"Để tin tưởng vào một ngày"},
+{"time":"169.66","en":"When hunger and war will pass away","vi":"Khi nghèo đói và chiến tranh sẽ trôi qua"},
+{"time":"175.16","en":"To have the hope amidst despair","vi":"Để có hy vọng giữa những tuyệt vọng"},
+{"time":"182.31","en":"That every sparrow's counted","vi":"Để mỗi tiếng chim sẻ được nghe thấy"},
+{"time":"185.38","en":"That you hear their cries and listen to each prayer","vi":"Để tiếng khóc và mỗi lời nguyện cầu được Người nghe thấy"},
+{"time":"193.36","en":"Father, as you see, I'm just a child","vi":"Thưa Cha, như cha thấy đó, con chỉ là một đứa trẻ"},
+{"time":"198.98","en":"And there's so much to understand","vi":"và còn quá nhiều điều con chưa hiểu"},
+{"time":"202.94","en":"But if Your Grace should surround me","vi":"Nhưng nếu Cha ban ân huệ cho con"},
+{"time":"206.24","en":"Then I'll do the very best I can","vi":"Thì con sẽ làm hết sức mình có thể!"},
+{"time":"209.56","en":"I promise, I'll do the very best I can","vi":"Con hứa, con sẽ làm hết sức mình có thể!"},
+{"time":"222.20","en":"To believe in a day","vi":"Để tin tưởng vào một ngày"},
+{"time":"229.86","en":"When hunger and war will pass away","vi":"Khi nghèo đói và chiến tranh sẽ trôi qua"},
+{"time":"235.72","en":"To have the hope amidst despair","vi":"Để có hy vọng giữa những thất vọng"},
+{"time":"242.98","en":"That every sparrow's counted","vi":"Để mỗi tiếng chim sẻ được nghe thấy"},
+{"time":"246.14","en":"That you hear each cries and listen to each","vi":"Để tiếng khóc và mỗi lời nguyện cầu được Người nghe thấy"},
+{"time":"250.4","en":"Prayer (Hear each cry and listen to each prayer)","vi":"Nguyện cầu (Lắng nghe từng tiếng khóc và lời nguyện cầu)"},
+{"time":"255.81","en":"Help us do Your will oh Father","vi":"Hãy giúp chúng con hoàn thành thánh ý của Cha"},
+{"time":"259.16","en":"In the name of all that's true","vi":"Nhân danh mọi điều đúng đắn"},
+{"time":"262.31","en":"And we'll see in one another","vi":"Và chúng con sẽ nhìn thấy nhau"},
+{"time":"265.59","en":"The loving image of You","vi":"Hình hài thân thương của Người"}]
+
+
+
+[{"time":"0.5","en":"Wild animals","vi":"Động vật hoang dã"},
+{"time":"3.20","en":"Some animals are wild","vi":"Một số loài động vật là hoang dã"},
+{"time":"5.10","en":"They don't live in homes or cages","vi":"Chúng không sống trong nhà hoặc trong chuồng"},
+{"time":"7.60","en":"They live in jungles or on plains","vi":"Chúng sống trong rừng hoặc trên đồng bằng"},
+{"time":"10.81","en":"The lion is the king of the beasts","vi":"Sư tử là vua của các loài thú"},
+{"time":"13.73","en":"He is very mighty","vi":"Nó rất mạnh mẽ"},
+{"time":"15.50","en":"He roars loudly","vi":"Nó gầm rú ầm ĩ"},
+{"time":"17.81","en":"The giraffe has a long neck","vi":"Hưu cao cổ có một cái cổ rất dài"},
+{"time":"20.40","en":"He eats leaves from the tallest trees","vi":"Nó ăn lá trên những cái cây cao nhất"},
+{"time":"23.80","en":"The elephant is very large","vi":"Con voi thì rất to lớn"},
+{"time":"26.30","en":"He has a trunk and two tusks","vi":"Nó có một cái vòi và hai cái ngà"},
+{"time":"29.50","en":"A tiger has stripes","vi":"Một con hổ có vằn"},
+{"time":"31.90","en":"Some bears are black, and some are brown","vi":"Những con gấu màu đen, và một số có màu nâu"},
+{"time":"35.45","en":"There are even white bears called polar bears","vi":"Có cả những con gấu màu trắng chúng được gọi là gấu bắc cực"},
+{"time":"39.40","en":"A kangaroo lives in Australia","vi":"Loài chuột túi sống ở Úc"},
+{"time":"42.54","en":"That is the only place that you would find a kangaroo, except in a zoo","vi":"Đó là nơi duy nhất bạn sẽ tìm thấy một con chuột túi, ngoại trừ trong vườn thú"},
+{"time":"48.15","en":"It might be frightening to run into a wolf or a fox","vi":"Có thể sẽ đáng sợ khi va chạm với một con sói hoặc một con cáo"},
+{"time":"52.40","en":"Monkeys run and play in the trees","vi":"Những con khỉ chạy và chơi đùa trên những cái cây"},
+{"time":"55.83","en":"In Canada, we don't see lions, tigers, giraffes or monkeys running wild","vi":"Ở Canada, chúng tôi không thấy những con sư tử, hổ, hưu cao cổ hoặc khỉ hoang dã"},
+{"time":"61.30","en":"There are squirrels in my back yard","vi":"Có những con sóc đang ở trước sân nhà tôi"},
+{"time":"63.70","en":"Sometimes, I see a raccoon or a chipmunk","vi":"Thỉnh thoảng, tôi thấy một con gấu trúc hoặc một con sóc chuột"},
+{"time":"67.83","en":"In northern Ontario, you might see a moose or a bear","vi":"Ở phái bắc Ontario, bạn có thể thấy một con nai sừng tấm hoặc một con gấu"},
+{"time":"72.72","en":"I have seen a deer in the forest","vi":"Tôi đã thấy một con nai trong rừng"},
+{"time":"75.38","en":"There are many wild animals","vi":"Có nhiều loài động vật hoang dã"},
+{"time":"77.44","en":"You can see wild animals if you go to the zoo","vi":"Bạn có thể thấy chúng nếu bạn đến vườn thú"}]
+
+She hangs out every day near by the beach
+Cô ấy lang thang suốt ngày ngoài bãi biển
+Having a Heineken falling a sleep
+Với một lon Heineken rồi ngủ thiếp đi
+She looks so sexy when she’s walking the sand
+Cô ấy trông thật gợi cảm khi cô ấy bước đi trên cát
+Nobody ever put a ring on her hand
+Vẫn chưa có ai trao chiếc nhẫn cưới cho cô ấy cả
+Swim to the oceanshore fish in the sea
+Như một chú cá bơi giữa biển cả
+She is the story the story is she
+Cô ấy là cả một câu chuyện
+She sings to the moon and the stars in the sky
+Cô ấy hát cùng trăng và sao trên trời
+Shining from high above you shouldn’t ask why
+Sáng soi từ trên cao bạn đừng nên hỏi tại sao
+She is the one that you never forget
+Cô ấy là một người bạn sẽ chẳng bao giờ quên
+She is the heaven-sent angel you met
+Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn
+Oh, she must be the reason why God made a girl
+Oh, cô ấy nhất định là lý do tại sao thượng đế tạo ra con gái
+She is so pretty all over the world
+Cô ấy đẹp nhất thế gian này
+She puts the rhythm, the beat in the drum
+Cô ấy khiến cho trống vang lên từng nhịp
+She comes in the morning, in the evening she’s gone
+Cô ấy đến vào lúc bình minh và đi khi đêm xuống
+Every little hour every second you live
+Mỗi giờ phút nhỏ nhoi mà bạn đang sống
+Trust in eternity that’s what she gives
+Hãy tin vào sự vĩnh hằng mà cô ấy trao
+She looks like Marilyn, walks like Suzanne
+Cô ấy trông giống như Marilyn, bước đi như Suzanne
+She talks like Monica and Marianne
+Cô ấy nói như Monica và Marianne
+She wins in everything that she might do
+Cô ấy chiến thắng mọi điều mà cô ấy làm
+And she will respect you forever just you
+Và cô ấy tôn trọng bạn mãi mãi chỉ có bạn
+She is the one that you never forget
+Cô ấy là một người bạn sẽ chẳng bao giờ quên
+She is the heaven-sent angel you met
+Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn
+Oh, she must be the reason why God made a girl
+Oh, cô ấy nhất định là lý do tại sao thương đế tạo ra con gái
+She is so pretty all over the world
+Cô ấy xinh đẹp nhất thế giới
+She is so pretty all over the world
+Cô ấy xinh đẹp nhất thế gian này
+She is so pretty
+Cô ấy rất xinh đẹp
+She is like you and me
+Cô ấy giống bạn và tôi
+Like them, like we
+Như họ, như chúng ta
+She is in you and me
+Cô ấy hiện hữu trong bạn và tôi
+She is the one that you never forget
+Cô ấy là một người bạn sẽ chẳng bao giờ quên
+She is the heaven-sent angel you met
+Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn
+Oh, she must be the reason why God made a girl
+Oh, cô ấy nhất định là lý do tại sao thượng đế tạo ra con gái
+She is so pretty all over the world
+Cô ấy xinh đẹp nhất thế gian này
+She is the one that you never forget
+Cô ấy là một người bạn sẽ chẳng bao giờ quên
+She is the heaven-sent angel you met
+Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn
+Oh she must be the reason why God made a girl
+Oh, cô ấy nhất định là lý do tại sao thượng đế tạo ra con gái
+She is so pretty all over the world
+Cô ấy xinh đẹp nhất thế gian này
+(She is the one) She is the one
+(Cô ấy là một) Cô ấy là một
+(That you never forget) That you never forget
+(Là một người bạn sẽ chẳng bao giờ quên) Là một người bạn sẽ chẳng bao giờ quên
+She is the heaven-sent angel you met
+Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn
+She’s the reason (oh she must be the reason) why God made a girl
+Cô ấy là lý do (oh có ấy nhất định là lý do) tại sao thượng đế tạo ra con gái
+She is so pretty all over the world (oh...)
+Cô ấy xinh đẹp nhất thế gian này (oh...)
+Na na na na na ….
+
+[{"time":"","en":"She hangs out every day near by the beach","vi":"Cô ấy lang thang suốt ngày ngoài bãi biển"},
+{"time":"","en":"Having a Heineken falling a sleep","vi":"Với một lon Heineken rồi ngủ thiếp đi"},
+{"time":"","en":"She looks so sexy when she’s walking the sand","vi":"Cô ấy trông thật gợi cảm khi cô ấy bước đi trên cát"},
+{"time":"","en":"Nobody ever put a ring on her hand","vi":"Vẫn chưa có ai trao chiếc nhẫn cưới cho cô ấy cả"},
+{"time":"","en":"Swim to the oceanshore fish in the sea","vi":"Như một chú cá bơi giữa biển cả"},
+{"time":"","en":"She is the story the story is she","vi":"Cô ấy là cả một câu chuyện"},
+{"time":"","en":"She sings to the moon and the stars in the sky","vi":"Cô ấy hát cùng trăng và sao trên trời"},
+{"time":"","en":"Shining from high above you shouldn’t ask why","vi":"Sáng soi từ trên cao bạn đừng nên hỏi tại sao"},
+{"time":"","en":"She is the one that you never forget","vi":"Cô ấy là một người bạn sẽ chẳng bao giờ quên"},
+{"time":"","en":"She is the heaven-sent angel you met","vi":"Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn"},
+{"time":"","en":"Oh, she must be the reason why God made a girl","vi":"Oh, cô ấy nhất định là lý do tại sao thượng đế tạo ra con gái"},
+{"time":"","en":"She is so pretty all over the world","vi":"Cô ấy đẹp nhất thế gian này"},
+{"time":"","en":"She puts the rhythm, the beat in the drum","vi":"Cô ấy khiến cho trống vang lên từng nhịp"},
+{"time":"","en":"She comes in the morning, in the evening she’s gone","vi":"Cô ấy đến vào lúc bình minh và đi khi đêm xuống"},
+{"time":"","en":"Every little hour every second you live","vi":"Mỗi giờ phút nhỏ nhoi mà bạn đang sống"},
+{"time":"","en":"Trust in eternity that’s what she gives","vi":"Hãy tin vào sự vĩnh hằng mà cô ấy trao"},
+{"time":"","en":"She looks like Marilyn, walks like Suzanne","vi":"Cô ấy trông giống như Marilyn, bước đi như Suzanne"},
+{"time":"","en":"She talks like Monica and Marianne","vi":"Cô ấy nói như Monica và Marianne"},
+{"time":"","en":"She wins in everything that she might do","vi":"Cô ấy chiến thắng mọi điều mà cô ấy làm"},
+{"time":"","en":"And she will respect you forever just you","vi":"Và cô ấy tôn trọng bạn mãi mãi chỉ có bạn"},
+{"time":"","en":"She is the one that you never forget","vi":"Cô ấy là một người bạn sẽ chẳng bao giờ quên"},
+{"time":"","en":"She is the heaven-sent angel you met","vi":"Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn"},
+{"time":"","en":"Oh, she must be the reason why God made a girl","vi":"Oh, cô ấy nhất định là lý do tại sao thương đế tạo ra con gái"},
+{"time":"","en":"She is so pretty all over the world","vi":"Cô ấy xinh đẹp nhất thế giới"},
+{"time":"","en":"She is so pretty all over the world","vi":"Cô ấy xinh đẹp nhất thế gian này"},
+{"time":"","en":"She is so pretty","vi":"Cô ấy rất xinh đẹp"},
+{"time":"","en":"She is like you and me","vi":"Cô ấy giống bạn và tôi"},
+{"time":"","en":"Like them, like we","vi":"Như họ, như chúng ta"},
+{"time":"","en":"She is in you and me","vi":"Cô ấy hiện hữu trong bạn và tôi"},
+{"time":"","en":"She is the one that you never forget","vi":"Cô ấy là một người bạn sẽ chẳng bao giờ quên"},
+{"time":"","en":"She is the heaven-sent angel you met","vi":"Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn"},
+{"time":"","en":"Oh, she must be the reason why God made a girl","vi":"Oh, cô ấy nhất định là lý do tại sao thượng đế tạo ra con gái"},
+{"time":"","en":"She is so pretty all over the world","vi":"Cô ấy xinh đẹp nhất thế gian này"},
+{"time":"","en":"She is the one that you never forget","vi":"Cô ấy là một người bạn sẽ chẳng bao giờ quên"},
+{"time":"","en":"She is the heaven-sent angel you met","vi":"Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn"},
+{"time":"","en":"Oh she must be the reason why God made a girl","vi":"Oh, cô ấy nhất định là lý do tại sao thượng đế tạo ra con gái"},
+{"time":"","en":"She is so pretty all over the world","vi":"Cô ấy xinh đẹp nhất thế gian này"},
+{"time":"","en":"(She is the one) She is the one","vi":"(Cô ấy là một) Cô ấy là một"},
+{"time":"","en":"(That you never forget) That you never forget","vi":"(Là một người bạn sẽ chẳng bao giờ quên) Là một người bạn sẽ chẳng bao giờ quên"},
+{"time":"","en":"She is the heaven-sent angel you met","vi":"Cô ấy là thiên thần được gửi xuống từ thiên đường cho bạn"},
+{"time":"","en":"She’s the reason (oh she must be the reason) why God made a girl","vi":"Cô ấy là lý do (oh có ấy nhất định là lý do) tại sao thượng đế tạo ra con gái"},
+{"time":"","en":"She is so pretty all over the world (oh...)","vi":"Cô ấy xinh đẹp nhất thế gian này (oh...)"},
+{"time":"","en":"Na na na na na ….","vi":"Na na na na na …."}]
+
+
+
+[{"time":"0.7","en":"Months","vi":"Tháng"},
+{"time":"2.98","en":"There are twelve months in the year","vi":"Có mười hai tháng trong một năm"},
+{"time":"5.75","en":"January is the first month of the year","vi":"Tháng một là tháng đầu tiên của năm"},
+{"time":"9.13","en":"It is usually cold in January","vi":"Thời tiết trong tháng một thường lạnh"},
+{"time":"12.70","en":"February is the second month of the year","vi":"Tháng hai là tháng thứ hai của năm"},
+{"time":"15.81","en":"It is still winter when February comes","vi":"Mùa đông vẫn còn khi tháng hai đến"},
+{"time":"19.50","en":"They say that March comes in like a lion and goes out like a lamb","vi":"Họ nói rằng tháng ba đến giống như một con sư tử và đi như một con nai"},
+{"time":"24.40","en":"That means that it is still usually cold, and sometimes stormy when March begins","vi":"Điều đó có nghĩa là trời vẫn còn lạnh, và thỉnh thoảng xuất hiện những cơn bão trong tháng ba"},
+{"time":"30.5","en":"By the time that March ends, the weather is starting to get a little better","vi":"Vào cuối tháng ba, thời tiết bắt đầu trở nên tốt hơn một chút"},
+{"time":"35.75","en":"April is the rainy month","vi":"Tháng tư là tháng mưa"},
+{"time":"38.40","en":"April showers bring May flowers","vi":"Mưa tháng tư mang hoa cho tháng năm"},
+{"time":"41.50","en":"Many of the spring flowers bloom in May","vi":"Nhiều trong số những bông hoa mùa xuân nở vào tháng năm"},
+{"time":"45.19","en":"The weather can be quite mild in May","vi":"Thời tiết có thể ấm lên hẳn vào tháng năm"},
+{"time":"48.50","en":"June is usually a nice warm month","vi":"Tháng sáu thường là tháng ấm áp"},
+{"time":"51.88","en":"Many people get married in June","vi":"Nhiều người đã tổ chức đám cưới trong tháng sáu"},
+{"time":"54.92","en":"July can be hot","vi":"Tháng bảy có thể là nóng"},
+{"time":"56.87","en":"People have vacations in July","vi":"Mọi người có những kỳ nghỉ vào tháng bảy"},
+{"time":"60.04","en":"It is a month to do summer things","vi":"Nó là một tháng để làm những thứ của mùa hè"},
+{"time":"63.19","en":"It is still summer in August, but the summer is winding down","vi":"Vẫn còn mùa hè trong tháng tám, nhưng mùa hè đang dần trôi qua"},
+{"time":"68.1","en":"August is the time to have last minute vacations","vi":"Tháng tám là thời gian có những kỳ nghỉ cuối cùng"},
+{"time":"72.02","en":"In September, we go back to school","vi":"Trong tháng chín, chúng ta trở lại trường học"},
+{"time":"74.46","en":"The autumn winds begin to blow","vi":"Những cơn gió mùa thu bắt đầu thổi"},
+{"time":"76.75","en":"October really feels like autumn","vi":"Tháng mười thực sự cảm thấy giống như mùa thu"},
+{"time":"79.79","en":"October is Halloween time","vi":"Tháng mười là thời gian diễn ra lễ hội Halloween"},
+{"time":"82.38","en":"November is when we really start to feel the chill","vi":"Tháng mười một là lúc chúng ta thực sự bắt đầu cảm thấy lạnh"},
+{"time":"86.67","en":"December is the Christmas month","vi":"Tháng mười hai là tháng của mùa giáng sinh"},
+{"time":"88.69","en":"Most people do a lot of Christmas shopping in December","vi":"Hầu hết mọi người mua sắm cho lễ giáng sinh rất nhiều trong tháng mười hai"},
+{"time":"92.24","en":"They spend quite a bit of time getting ready for Christmas","vi":"Họ dành khá nhiều thời gian để chuẩn bị cho lễ giáng sinh"},
+{"time":"95.81","en":"All of the months are different","vi":"Tất cả các tháng đều khác nhau"},
+{"time":"97.86","en":"Which month were you born in?","vi":"Bạn đã được sinh ra trong tháng nào?"}]

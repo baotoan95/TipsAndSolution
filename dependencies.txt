@@ -2,11 +2,11 @@
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
 		<servlet.jsp-api.version>2.3.1</servlet.jsp-api.version>
-		<jstl.version>1.2</jstl.version><jstl.version>1.2</jstl.version>
+		<jstl.version>1.2</jstl.version>
 		<mysql-connector.version>5.1.6</mysql-connector.version>
 		<javax.validation.version>1.1.0.Final</javax.validation.version>
 		<hibernate.validator.version>5.1.2.Final</hibernate.validator.version>
-		<jackson.version>1.9.10</jackson.version>
+		<jackson.version>2.4.0</jackson.version>
 		<java.mail.version>1.4.7</java.mail.version>
 		<tiles.version>3.0.3</tiles.version>
 		<spring.security.version>4.0.2.RELEASE</spring.security.version>
@@ -165,9 +165,20 @@
 		</dependency>
 		<!-- Jackson (For covert json ) -->
 		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotions</artifactId>
+			<version>2.4.0</version>
 		</dependency>
 		<!-- For json object -->
 		<dependency>
@@ -265,6 +276,19 @@
 		</dependency>
 		<!-- Hibernate dependent end -->
 	</dependencies>
+	
+	<!-- Spring IO Platform Sử dụng để quản lý các dependency mà không cần phải khai báo version nếu ko có cái này thì tất cả các dependence là manual (tức là phải khai báo version) -->
+	<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>io.spring.platform</groupId>
+            <artifactId>platform-bom</artifactId>
+            <version>1.1.2.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 	
 	<build>
 		<finalName>Jersey_Server</finalName>
