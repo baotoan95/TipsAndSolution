@@ -1,0 +1,6 @@
+Một số lưu ý khi sử dụng HTML
+- Reset CSS giúp đồng bộ hiển thị trên trình duyệt, vì mỗi trình duyệt định nghĩa hỏi khác nhau đối với các html component (ví dụ padding, margin,…). Sử dụng normalize.css.
+-
+
+Một số lưu ý khi sử dụng CSS
+- Không set with=100% cho div container (test trên chrome) vì nó không center được.
