@@ -14,7 +14,7 @@
       http://www.springframework.org/schema/mvc
       http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
 
-	<context:component-scan base-package="com.baotoan.spring.controller, com.baotoan.spring.service" />
+	<context:component-scan base-package="com.baotoan.spring" />
 	<mvc:annotation-driven />
 
 	<!-- Reading properties file -->
@@ -25,13 +25,7 @@
 		</list>
 	    </property>
 	</bean>
-
-<!-- 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
-<!-- 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" /> -->
-<!-- 		<property name="prefix" value="/WEB-INF/pages/" /> -->
-<!-- 		<property name="suffix" value=".jsp" /> -->
-<!-- 	</bean> -->
-	
+		<!-- View resolver using tiles 3 -->
 		<bean id="tilesConfigurer"
 			class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 			<property name="definitions">
@@ -45,6 +39,7 @@
 			<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
 		</bean>
 
+		<!-- View resolver default -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 			<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 			<property name="prefix" value="/WEB-INF/pages/" />
@@ -85,7 +80,13 @@
 				<prop key="mail.mime.charset">UTF-8</prop>
 			</props>
 		</property>
-	</bean>	
+	</bean>
+
+	<!-- Config database -->
+	<mongo:db-factory id="mongoDBFactory" host="localhost" port="27017" dbname="student_management"/>
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="mongoDBFactory"></constructor-arg>
+	</bean>
 
 </beans>
 

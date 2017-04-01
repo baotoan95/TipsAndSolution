@@ -275,6 +275,26 @@
 			<version>4.0</version>
 		</dependency>
 		<!-- Hibernate dependent end -->
+
+		<!-- mongodb java driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.12.3</version>
+		</dependency>
+
+		<!-- Spring data mongodb -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.5.2.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2.2</version>
+		</dependency>
 	</dependencies>
 	
 	<!-- Spring IO Platform Sử dụng để quản lý các dependency mà không cần phải khai báo version nếu ko có cái này thì tất cả các dependence là manual (tức là phải khai báo version) -->
