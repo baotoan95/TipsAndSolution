@@ -1,4 +1,7 @@
-﻿cglib : is required to process @Configuration classes (Error: Exception in thread "main" java.lang.IllegalStateException: 
+﻿Khi config url-pattern cho Dispatcher trong web.xml với hậu tố là gì đó thì mặc định lúc khởi động sẽ đi tìm file index.jsp nằm ở webapp folder đầu tiên để hiển thị, nếu không tìm thấy nó tiếp tục gọi tới thư mục chứa view được config trong xxx-servlet.xml.
+khi config hậu tố url-pattern cho Dispatcher Spring sẽ tìm controller mapping có tiền tố là index để chạy đầu tiên, những mapping không phải là index thì phải có hậu tố đã định sẵn.
+============================================
+cglib : is required to process @Configuration classes (Error: Exception in thread "main" java.lang.IllegalStateException: 
 CGLIB is required to process @Configuration classes.)
 ============================================
 spring-orm: Less coding is required: By the help of Spring framework, you don't need to write extra codes before and after the actual database logic such as getting the connection, starting transaction, commiting transaction, closing connection etc.
