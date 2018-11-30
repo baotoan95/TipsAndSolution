@@ -1,0 +1,13 @@
+Restore pgsql file:
+Step 1: login to postgres user: sudo -u postgres -i
+Step 2: pg_dump db_name < file_name.pgsql
+
+Config postgres:
+Step 1: login with root
+Step 2: cd to: /etc/postgres/config/pg_hba.conf and postgres.conf
+Step 3: restart postgres server:
+	- Login to postgres: su postgres
+	- Input cmd: pg_ctl -m
+	
+Synology:
+	/usr/syno/sbin/synoserver -restart service_name
